@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-const 
+const API_URL = import.meta.env.VITE_BASE_URL;
 const InputForm = ({ setIsOpen }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
