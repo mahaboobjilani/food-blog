@@ -7,12 +7,15 @@ import EditRecipe from "./pages/EditRecipe";
 import Home from "./pages/Home";
 import RecipeDetails from "./pages/RecipeDetails";
 
-
+const API_URL = import.meta.env.VITE_BASE_URL;
 const getAllRecipes=async()=>{
   let allRecipes=[]
-  await axios.get('https://food-blog-backend-delta.vercel.app/recipe/allRecipies').then(res=>{
+  console.log(API_URL)
+  await axios.get(`${API_URL}/recipe/allRecipes`).then(res=>{
+
     allRecipes=res.data
   })
+  console.log(allRecipes)
   return allRecipes
 }
 const getMyRecipes=async()=>{
@@ -31,7 +34,7 @@ const getFavRecipes = () => {
 };
 
 const getRecipeById = async ({ params }) => {
-  const res = await axios.get(`https://food-blog-backend-delta.vercel.app/recipe/${params.id}`);
+  const res = await axios.get(`${API_URL}/recipe/${params.id}`);
   return res.data;
 };
 

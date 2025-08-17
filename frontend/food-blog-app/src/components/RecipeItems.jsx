@@ -5,7 +5,7 @@ import { FaEdit } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { Link, useLoaderData, useNavigate } from "react-router";
-
+const API_URL = import.meta.env.VITE_BASE_URL;
 const RecipeItems = () => {
   const recipes = useLoaderData();
   const [allRecipes, setAllRecipes] = useState([]);
@@ -42,7 +42,7 @@ const RecipeItems = () => {
   }, []);
 
   const onDelete = async (id) => {
-    await axios.delete(`https://food-blog-backend-delta.vercel.app/recipe/${id}`);
+    await axios.delete(`${API_URL}/recipe/${id}`);
     setAllRecipes((recipes) => recipes.filter((recipe) => recipe._id !== id));
 
     // also remove from favorites
@@ -87,7 +87,7 @@ const RecipeItems = () => {
       {allRecipes?.map((item, index) => (
         <div key={index} className="card">
           <img
-            src={`https://food-blog-backend-delta.vercel.app/images/${item.coverImage}`}
+            src={item.coverImage}
             width="120px"
             height="100px"
           />

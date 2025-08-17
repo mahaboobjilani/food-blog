@@ -11,7 +11,7 @@ const verifyToken = require("../middleware/auth.js");
 
 const router = express.Router();
 
-router.get("/allRecipies", getRecipes);
+router.get("/allRecipes", getRecipes);
 router.get("/:id", getRecipe);
 router.post("/", upload.single("file"), verifyToken, addRecipe);
 router.put("/:id", upload.single("file"), editRecipe);

@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import profileImg from '../assets/profile.png';
+const API_URL = import.meta.env.VITE_BASE_URL;
 export default function RecipeDetails() {
     const recipe = useLoaderData()
     console.log(recipe)
@@ -13,7 +14,7 @@ export default function RecipeDetails() {
                 </div>
                 <h3 className='title'>{recipe.title}</h3>
                 <img
-                    src={`https://food-blog-backend-delta.vercel.app/images/${recipe.coverImage}`}
+                    src={`${API_URL}/images/${recipe.coverImage}`}
                     width="220px"
                     height="200px"
                     alt={recipe.title}

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-
+const 
 const InputForm = ({ setIsOpen }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,7 @@ const InputForm = ({ setIsOpen }) => {
     let endPoint = isSignup ? "signup" : "login";
 
     try {
-      const res = await axios.post(`https://food-blog-backend-delta.vercel.app/${endPoint}`, {
+      const res = await axios.post(`${API_URL}/${endPoint}`, {
         email,
         password,
       });

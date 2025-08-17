@@ -1,7 +1,7 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+const API_URL = import.meta.env.VITE_BASE_URL;
 export default function EditRecipe() {
     const [recipeData, setRecipeData] = useState({})
     const navigate = useNavigate()
@@ -9,7 +9,7 @@ export default function EditRecipe() {
 
     useEffect(() => {
         const getData=async()=>{
-            await axios.get(`https://food-blog-backend-delta.vercel.app/recipe/${id}`)
+            await axios.get(`${API_URL}/recipe/${id}`)
             .then(response=>{
                 let res=response.data
                 setRecipeData({
@@ -31,7 +31,7 @@ export default function EditRecipe() {
     const onHandleSubmit = async (e) => {
         e.preventDefault()
         console.log(recipeData)
-        await axios.put(`https://food-blog-backend-delta.vercel.app/recipe/${id}`, recipeData,{
+        await axios.put(`${API_URL}/recipe/${id}`, recipeData,{
             headers:{
                 'Content-Type':'multipart/form-data',
                 'authorization':'bearer '+localStorage.getItem("token")
