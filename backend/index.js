@@ -6,6 +6,7 @@ const connectMongoDb = require("./config/connectionDb");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Connect to MongoDB
 connectMongoDb();
 
 // ✅ Secure CORS Configuration
@@ -33,11 +34,18 @@ app.options("*", cors());
 app.use(express.json());
 app.use(express.static("public"));
 
+// Root route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to the Food Recipe API! Server is running."
+  });
+});
+
 // Routes
 app.use("/recipe", require("./routes/recipe.js"));
 app.use("/", require("./routes/user.js"));
 
-// Server
+// Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server started at port ${PORT}`);
 });

@@ -10,7 +10,7 @@ import RecipeDetails from "./pages/RecipeDetails";
 
 const getAllRecipes=async()=>{
   let allRecipes=[]
-  await axios.get('http://localhost:5000/recipe').then(res=>{
+  await axios.get('https://food-blog-backend-delta.vercel.app/recipe/allRecipies').then(res=>{
     allRecipes=res.data
   })
   return allRecipes
@@ -31,7 +31,7 @@ const getFavRecipes = () => {
 };
 
 const getRecipeById = async ({ params }) => {
-  const res = await axios.get(`http://localhost:5000/recipe/${params.id}`);
+  const res = await axios.get(`https://food-blog-backend-delta.vercel.app/recipe/${params.id}`);
   return res.data;
 };
 

@@ -12,7 +12,7 @@ const InputForm = ({ setIsOpen }) => {
     let endPoint = isSignup ? "signup" : "login";
 
     try {
-      const res = await axios.post(`http://localhost:5000/${endPoint}`, {
+      const res = await axios.post(`https://food-blog-backend-delta.vercel.app/${endPoint}`, {
         email,
         password,
       });
