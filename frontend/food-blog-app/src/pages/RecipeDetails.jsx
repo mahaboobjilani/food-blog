@@ -14,7 +14,7 @@ export default function RecipeDetails() {
                 </div>
                 <h3 className='title'>{recipe.title}</h3>
                 <img
-                    src={`${API_URL}/images/${recipe.coverImage}`}
+                    src={`${recipe.coverImage}`}
                     width="220px"
                     height="200px"
                     alt={recipe.title}
