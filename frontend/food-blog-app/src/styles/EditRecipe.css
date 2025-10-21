@@ -1,0 +1,150 @@
+/* ===== Outer Wrapper ===== */
+.edit-recipe-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  min-height: 100vh;
+  background-color: #e6f0f5;
+}
+
+/* ===== Form Container ===== */
+.edit-recipe-form {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  background: #f5f9fc;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Form Heading */
+.edit-recipe-form h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #213547;
+  margin-bottom: 20px;
+}
+
+/* Form Fields */
+.edit-recipe-form .form-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* Labels */
+.edit-recipe-form .form-control label {
+  width: 120px;
+  text-align: right;
+  font-weight: 500;
+  color: #213547;
+}
+
+/* Text Inputs & Textarea */
+.edit-recipe-form .form-control input[type="text"],
+.edit-recipe-form .form-control textarea {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #ffffffcc;
+  outline: none;
+}
+
+.edit-recipe-form .form-control textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Focus Effect */
+.edit-recipe-form .form-control input:focus,
+.edit-recipe-form .form-control textarea:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 6px rgba(116, 185, 255, 0.3);
+}
+
+/* ===== File Input ===== */
+.edit-recipe-form .form-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.edit-recipe-form .form-controls label {
+  font-weight: 500;
+  color: #213547;
+}
+
+/* File input box */
+.edit-recipe-form .form-controls input[type="file"] {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0 10px;
+  background-color: #ffffffcc;
+  cursor: pointer;
+  outline: none;
+
+  display: flex;
+  align-items: center; /* vertical center the text */
+  box-sizing: border-box;
+}
+
+/* File selector button */
+.edit-recipe-form .form-controls input[type="file"]::file-selector-button {
+  height: 100%;
+  margin: 0;
+  padding: 0 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.edit-recipe-form .form-controls input[type="file"]::file-selector-button:hover {
+  background-color: #369a45;
+}
+
+/* ===== Submit Button ===== */
+.edit-recipe-form button {
+  display: block;
+  margin: 15px auto 0;
+  padding: 12px 0;
+  width: 35%;
+  background-color: #74b9ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.edit-recipe-form button:hover {
+  background-color: #4a90e2;
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 480px) {
+  .edit-recipe-form .form-control label {
+    width: 100px;
+  }
+
+  .edit-recipe-form button {
+    width: 50%;
+  }
+}

@@ -3,35 +3,30 @@
   line-height: 1.5;
   font-weight: 400;
 
-  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ===== Global Colors and Links ===== */
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
+/* ===== Headings ===== */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* ===== Buttons ===== */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -41,16 +36,19 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.3s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* ===== Light Mode ===== */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -62,4 +60,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* ===== Fix for Navbar Overlap ===== */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* The main app area (adjust for fixed navbar height) */
+#root {
+  padding-top: 80px; /* <-- match this with your header height */
+}
+
+/* Optionally, apply to all top-level sections too */
+
+
+/* ===== General Utility ===== */
+img {
+  max-width: 100%;
+  display: block;
 }

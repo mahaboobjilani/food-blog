@@ -1,0 +1,402 @@
+/* ===== Home Section ===== */
+
+/* ===== General Section Styling ===== */
+section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  /* reduced from 35px to 20px */
+  position: relative;
+  padding-top: 20px !important;
+  margin-top: 40px !important;
+}
+
+/* Specific sections (optional fine-tuning) */
+.home-features,
+.values-grid,
+.home-contact,
+.testimonials-section {
+  padding: 25px 15px;
+  /* reduce top/bottom padding */
+  /* smaller space between sections */
+  border-radius: 10px;
+  /* keep styling */
+
+}
+
+
+
+.home {
+
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+
+}
+
+
+
+
+/* Left Section (Hero Text) */
+.home .left h1 {
+  margin-bottom: 0.8rem;
+  font-size: 2.4rem;
+  color: #213547;
+}
+
+.home .left h5 {
+  margin: 1rem 0;
+  color: #4a4a4a;
+}
+
+.home button {
+  color: white;
+  border: none;
+  background-color: #213547;
+  width: 200px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  white-space: nowrap;
+  /* prevent text from breaking into multiple lines */
+  overflow: hidden;
+  /* optional, hides any overflow */
+  text-overflow: ellipsis;
+  /* optional, adds ... if text overflows */
+}
+
+
+.home button:hover {
+  background-color: #2c4860;
+}
+
+
+/* Background SVG adjustments */
+.bg {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* prevent any extra overflow */
+  margin-top: -60px;
+  /* lift the SVG slightly to reduce gap */
+}
+
+.bg svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== Global Section Styling ===== */
+section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 35px 0;
+  /* reduced from 60px to 35px */
+  position: relative;
+}
+
+/* ===== Features Section ===== */
+.home-features {
+  text-align: center;
+  background-color: #e8f5f1;
+  border-radius: 10px;
+}
+
+.home-features h2 {
+  font-size: 1.8rem;
+  color: #213547;
+  margin-bottom: 20px;
+  /* reduced */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  /* slightly tighter grid */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #213547;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+}
+
+/* ===== About Section ===== */
+.about-section {
+  text-align: center;
+  padding: 35px 15px;
+  background-color: #e8f5f1;
+  border-radius: 10px;
+}
+
+.about-section h2 {
+  margin-bottom: 10px;
+  color: #213547;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+/* ===== Core Values Section ===== */
+.values-grid {
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  background-color: #e8f5f1;
+  border-radius: 10px;
+}
+
+.value-card img {
+  width: 70%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* ===== Contact Section ===== */
+.home-contact {
+  text-align: center;
+  padding: 35px 15px;
+  background-color: #e8f5f1;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.home-contact h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #213547;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  min-width: 200px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h4 {
+  color: #4caf50;
+  margin-bottom: 5px;
+}
+
+.contact-card p {
+  color: #333;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ===== Testimonials Section ===== */
+/* ===== Testimonials Section ===== */
+.testimonials-section {
+  padding: 50px 10%;
+  text-align: center;
+  background-color: #e8f5f1;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+}
+
+/* Section title */
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #213547;
+}
+
+/* Grid for testimonials - centered items */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* card width */
+  gap: 20px;
+  justify-content: center;
+  /* center the grid horizontally */
+  justify-items: center;
+  /* center each item inside grid cell */
+}
+
+/* Individual testimonial card */
+.testimonial-card {
+  background-color: #ffffff;
+  /* inner white color */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  /* increased height with padding */
+  text-align: center;
+  width: 190px;
+  /* reduced width */
+  height: 250px;
+  /* increased height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Avatar image */
+.testimonial-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin-bottom: 15px;
+}
+.testimonial-avatar {
+  width: 80px;        /* adjust size as needed */
+  height: 80px;       /* keep it square for perfect circle */
+  border-radius: 10%; /* makes it fully round */
+  object-fit: cover;  /* ensures the image fits nicely inside the circle */
+  border: 2px solid #ddd; /* optional border */
+  margin-bottom: 5px;
+}
+
+/* Name */
+.testimonial-card h4 {
+  margin-bottom: 10px;
+  color: #213547;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Review text */
+.testimonial-card p {
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== Responsive Fixes ===== */
+@media screen and (max-width: 768px) {
+  .home {
+    padding-top: 70px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section {
+    padding: 25px 0;
+  }
+
+  .feature-card,
+  .contact-card,
+  .testimonial-card {
+    padding: 16px;
+  }
+
+  .home button {
+    width: 150px;
+  }
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials {
+  background-color: #e1f0ec;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-size: 2rem;
+  color: #213547;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Wrapper to center all testimonial cards */
+.testimonials-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 cards per row */
+  gap: 20px;
+  justify-items: center;
+  /* center cards in their grid cell */
+}
+
+.testimonial {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px 20px;
+  width: 100%;
+  /* take full width of grid cell */
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+  .testimonials-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cards per row on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials-wrapper {
+    grid-template-columns: 1fr;
+    /* 1 card per row on mobile */
+  }
+}

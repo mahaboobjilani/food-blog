@@ -1,0 +1,253 @@
+
+.search-bar {
+  width: 100%;
+  max-width: 500px;       /* limit width */
+  margin: 0 auto;         /* center horizontally */
+ margin-bottom:20px;     /* space below fixed header (adjust if header height changes) */
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  padding-right: 40px;     /* optional space for icon */
+  border: 1px solid #ccc;
+  border-radius: 30px;     /* rounded edges */
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #6fe964;   /* accent on focus */
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.3);
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+
+/* Navbar container */
+.no-recipes {
+  text-align: center;       /* Center horizontally */
+  font-size: 1.2rem;        /* Slightly larger text */
+  color: #555555;           /* Grey color for subtlety */
+  margin-top: 2rem;         /* Space from top */
+  font-weight: 500;         /* Medium weight */
+}
+
+@media screen and (max-width: 768px) {
+  .no-recipes {
+    font-size: 1rem;        /* Slightly smaller on mobile */
+    margin-top: 1.5rem;
+  }
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* responsive */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* center the grid */
+}
+
+/* Each card */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Text & Body */
+.card-body {
+  padding: 15px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+
+
+.card {
+  background: #fff; /* card outer background */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card-body {
+  background-color: #d4f6e8; /* main card content background */
+  padding: 1rem;
+  flex: 1; /* ensures full height inside card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push buttons/action to bottom */
+  border-radius: 0 0 16px 16px; /* round bottom corners */
+}
+
+
+.card-body .title{
+  margin-bottom:5px;
+  font-size: 15px;
+  font-weight:500;
+}
+
+
+.action{
+  display: flex;
+  font-size: 19px;
+  justify-content: space-between;
+  align-items: center;
+  width: 45px;
+}
+
+
+
+.action a:hover{
+  color: black;
+}
+
+/* Icons row: heart left, timer right */
+.card-body .icons {
+  display: flex;
+  justify-content: space-between; /* heart left, timer right */
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Heart (favorite) icon */
+.heart-icon {
+  font-size: 1.3rem;
+  color: #8a827f;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.heart-icon:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+/* Timer icon */
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+/* Container for edit/delete icons at bottom of card */
+/* Edit/Delete container */
+/* Container for edit/delete icons at bottom of card */
+.card-body .action {
+  display: flex;
+  justify-content: space-between; /* edit left, delete right */
+  align-items: center;
+  margin-top: 12px;
+  padding: 0 10px;
+  width: 100%;  /* make it full width of card body */
+}
+
+/* Edit icon */
+.editIcon {
+  font-size: 1.6rem;               /* bigger */
+  color: #4caf50;                  /* green */
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  padding: 6px;                    /* clickable area */
+  border-radius: 6px;
+}
+
+.editIcon:hover {
+  transform: scale(1.2);
+  color: #2e7d32;
+  background-color: rgba(76, 175, 80, 0.1); /* subtle hover bg */
+}
+
+/* Delete icon */
+.deleteIcon {
+  font-size: 2.4rem;               /* bigger */
+  color: #f44336;                  /* red */
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  padding: 6px;                    /* clickable area */
+  border-radius: 6px;
+}
+
+.deleteIcon:hover {
+  transform: scale(1.2);
+  color: #d32f2f;
+  background-color: rgba(244, 67, 54, 0.1); /* subtle hover bg */
+}
+
+
+
+.details-btn {
+  margin-top: 10px;
+  padding: 6px 0;
+  background: none;              /* no background */
+  color: #4caf50;                /* green text */
+  border: none;                  /* no border */
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;     /* move to right side */
+  width: 100%;                   /* full width so it aligns right */
+  text-align: right;             /* align text right */
+  transition: color 0.3s, transform 0.3s;
+  
+  outline: none;                 /* remove focus outline */
+  box-shadow: none;              /* remove any shadow on focus */
+}
+
+.details-btn:hover {
+  color: #6956d6;                /* darker green on hover */
+  transform: translateX(3px);    /* subtle move right effect */
+}
+
+/* Remove focus/active outline for edit and delete icons */
+
+.details-btn:focus,
+.details-btn:active {
+  outline: none;                 /* remove focus box */
+  box-shadow: none;              /* remove shadow */
+  background: none;              /* remove default active background */
+}

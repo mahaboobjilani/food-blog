@@ -1,5 +1,7 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import profileImg from '../assets/profile.png';
+import '../styles/RecipeDetails.css';
+
 const API_URL = import.meta.env.VITE_BASE_URL;
 export default function RecipeDetails() {
     const recipe = useLoaderData()
@@ -34,10 +36,10 @@ export default function RecipeDetails() {
                     </div>
                 </div>
 
-                {/* 👇 Add back link */}
-                <div style={{ marginTop: "20px" }}>
-                    <Link to="/">⬅ Back to Recipes</Link>
-                </div>
+                
+                {/* <div style={{ marginTop: "20px" }}>
+                    <Link to="/menu">⬅ Back to Menu</Link>
+                </div> */}
             </div>
         </>
     )

@@ -2,8 +2,8 @@ const User = require("../models/user");
 const jwt=require("jsonwebtoken");
 const bcrypt=require("bcrypt");
 const userSignup=async(req,res)=>{
-    const {email,password}=req.body;
-    if(!email || !password){
+    const {email,password,username}=req.body;
+    if(!email || !password || !username){
         return res.status(400).json({message:"All fields required"})
     }
     const user=await User.findOne({email});
@@ -12,14 +12,14 @@ const userSignup=async(req,res)=>{
     }
     const hashPwd=await bcrypt.hash(password,10);
     const newUser=await User.create({
-        email,password:hashPwd
+        username,email,password:hashPwd
     })
     let token=jwt.sign({email,id:newUser._id},process.env.SECRET_KEY)
     return res.status(200).json({token,user:newUser});
 }
 const userLogin=async(req,res)=>{
     const {email,password}=req.body;
-    if(!email || !password){
+    if(!email || !password ){
         return res.status(400).json({message:"All fields required"})
     }
     const user=await User.findOne({email});
@@ -33,12 +33,11 @@ const userLogin=async(req,res)=>{
 }
 const getUser=async(req,res)=>{
     const user=await User.findById(req.params.id);
-    return res.json({email:user.email})
+   return res.json({ email: user.email, username: user.username });
+
     
 }
 
 module.exports = {
     userSignup,userLogin,getUser
 }
-
-

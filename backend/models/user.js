@@ -9,7 +9,11 @@ const userSchema=mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    username:{
+        type:String,
+        required:true,
+    },
 },{timeStamps:true})
 
 module.exports=mongoose.model("User",userSchema);

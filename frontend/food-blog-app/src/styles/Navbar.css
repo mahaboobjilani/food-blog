@@ -1,0 +1,159 @@
+/* ===== Header ===== */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 70px; /* slightly taller */
+  background-color: #f0f0f0; /* neutral white-gray */
+  color: #213547;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Ensure body content starts below navbar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+main,
+section,
+.container,
+.home {
+  margin-top: 80px !important; /* pushes all content below navbar */
+}
+
+/* Logo / Title */
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #213547;
+  margin: 0;
+}
+
+/* Navigation Links */
+header ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  cursor: pointer;
+  position: relative;
+}
+
+/* Links and login button */
+header ul li a,
+header ul li p.login {
+  text-decoration: none;
+  color: #213547;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover Effects */
+header ul li a:hover,
+header ul li p.login:hover {
+  background-color: #8dc2f0;
+  color: #ffffff;
+}
+
+/* Active NavLink Styling */
+header ul li a.active {
+  background-color: #90ddd0;
+  color: white;
+}
+
+/* Dropdown */
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 0.5rem 0;
+  min-width: 140px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  color: #213547;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Login/Logout button */
+p.login {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+p.login:hover {
+  background-color: #369a45;
+}
+
+/* ===== Responsive Header ===== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  header ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  header ul li a,
+  p.login {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}

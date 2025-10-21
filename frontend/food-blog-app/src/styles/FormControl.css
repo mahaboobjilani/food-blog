@@ -1,0 +1,107 @@
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.outer-container {
+  max-width: 75%;
+  margin: 80px auto; /* centers horizontally */
+  padding: 40px;
+  background: #d4f6df;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+.form {
+  width: 71%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; /* ✅ Prevents children from overflowing the form container */
+}
+
+.form-header {
+  background-color: #d4f6e8;
+  height: 3px;
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-control .input {
+  flex: 1;               /* ✅ Allows input to take remaining space */
+  min-width: 0;          /* ✅ Prevents flexbox overflow issues */
+  max-width: 70%;        /* ✅ Ensures it won’t exceed the card */
+  border: 1px solid rgb(156 163 175);
+  border-radius: 4px;
+  height: 30px;
+  padding: 2px;
+  box-sizing: border-box; /* ✅ Includes padding in width calculation */
+}
+
+.form-control .input-textarea {
+  border: 1px solid rgb(156 163 175);
+  border-radius: 4px;
+  flex: 1;               /* ✅ Same flexible behavior for textarea */
+  min-width: 0;
+  max-width: 70%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.form button {
+  display: block;          /* Ensure it’s block-level */
+  width: 100%;             /* Full width */
+  margin: 1.5rem 0 0.5rem; /* spacing above and below */
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.form button:hover {
+  background-color: #369a45;
+  transform: translateY(-2px);
+}
+
+/* Make toggle text appear below button on new line */
+.form p {
+  display: block;           /* ✅ Force block level */
+  text-align: center;       /* center it below button */
+  margin-top: 10px;         /* spacing from button */
+  font-size: 14px;
+  color: #307bbd;
+  cursor: pointer;
+  border-bottom: 1px solid #307bbd;
+  width: fit-content;       /* shrink to text width */
+  margin-left: auto;        /* center horizontally */
+  margin-right: auto;
+}
+
+.form p:hover {
+  color: #1d5a91;
+  border-bottom-color: #1d5a91;
+}
+
+
+.form .error{
+  color:red;
+  font-size: 13px;
+}
