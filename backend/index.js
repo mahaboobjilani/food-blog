@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 connectMongoDb();
 
 // ✅ Secure CORS Configuration
-const allowedOrigins = [process.env.FRONTEND_URL,"http://localhost:5173/"];
+const allowedOrigins = [process.env.FRONTEND_URL,"http://localhost:5173"];
 
 app.use(cors({
   origin: function (origin, callback) {
