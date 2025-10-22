@@ -12,7 +12,7 @@ const AddFoodRecipe = () => {
   const [time, setTime] = useState("");
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState([
-    "Breakfast",
+    "Tiffins",
     "Nonveg",
     "Snack",
     "Fastfoods",
