@@ -1,6 +1,3 @@
-/* ===== Home Section ===== */
-
-/* ===== General Section Styling ===== */
 section {
   width: 90%;
   margin: 0 auto;
@@ -17,10 +14,9 @@ section {
 .home-contact,
 .testimonials-section {
   padding: 25px 15px;
-  /* reduce top/bottom padding */
-  /* smaller space between sections */
+
   border-radius: 10px;
-  /* keep styling */
+
 
 }
 
@@ -385,18 +381,43 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
-
 /* ===== Responsive ===== */
 @media screen and (max-width: 1024px) {
   .testimonials-wrapper {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2 cards per row on medium screens */
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .testimonials-wrapper {
-    grid-template-columns: 1fr;
-    /* 1 card per row on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0 1rem;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .testimonial-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
