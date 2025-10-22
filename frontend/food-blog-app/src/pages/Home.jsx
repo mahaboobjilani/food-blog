@@ -115,21 +115,21 @@ const Home = () => {
   <div className="testimonials-wrapper">
     <div className="testimonial">
       <img src={mehra} alt="Akshay Mehra" className="testimonial-avatar" />
-      <h4 className="testimonial-name">Akshay Mehra</h4>
+      <h4 className="testimonial-name">Mahendra</h4>
       <p className="testimonial-text">
         "Working with this team has been an incredible experience. Everyone is so supportive and collaborative!"
       </p>
     </div>
     <div className="testimonial">
       <img src={divya} alt="Divya Singh" className="testimonial-avatar" />
-      <h4 className="testimonial-name">Divya Singh</h4>
+      <h4 className="testimonial-name">Divya</h4>
       <p className="testimonial-text">
         "The team's dedication and creativity make every project exciting. I'm proud to be a part of it!"
       </p>
     </div>
     <div className="testimonial">
       <img src={ravi} alt="Ravi Patel" className="testimonial-avatar" />
-      <h4 className="testimonial-name">Ravi Patel</h4>
+      <h4 className="testimonial-name">Ravi</h4>
       <p className="testimonial-text">
         "Collaboration here is seamless. Everyone contributes their best, and the environment is very motivating."
       </p>
